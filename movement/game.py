@@ -42,11 +42,6 @@ class Game:
             if event.type == pygame.QUIT:
                 self.__running = False
 
-            if event.type == pygame.KEYDOWN:
-                self.__animation.handle_input(True, event.key)
-            if event.type == pygame.KEYUP:
-                self.__animation.handle_input(False, event.key)
-
     def __update(self, delta):
         self.__animation.update(delta)
 
